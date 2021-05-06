@@ -1,0 +1,31 @@
+type Query {
+  ping: String!
+  messages: [Message!]
+  products: [Product!]
+}
+
+type Mutation {
+  createMessage(title: String!, content: String!, author: String!, createdAt: String, updatedAt: String): Message
+  createProduct(name: String!, description: String!, price: Float!): Product
+}
+
+type Message {
+  _id: ID!
+  title: String!
+  content: String!
+  author: String!
+  createdAt: String
+  updatedAt: String
+}
+
+type Product {
+  _id: ID!
+  name: String!
+  description: String!
+  price: Float!
+  barcode: String
+  images: String
+  reviews: Float
+  createdAt: String
+  updatedAt: String
+}
